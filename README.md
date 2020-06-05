@@ -6,3 +6,13 @@ This repository contains PyTorch code for adversarial querying with [ProtoNet](h
 * Python2
 * PyTorch
 * CUDA
+
+## Results:
+| Model                        | A_nat           | A_adv           |
+|------------------------------|-----------------|-----------------|
+| Naturally Trained R2-D2      | 73.01% +/- 0.13 | 0.00% +/- 0.13  |
+| AT Transfer (R2-D2 backbone) | 39.13% +/- 0.13 | 25.33% +/- 0.13 |
+| ADML                         | 47.75% +/- 0.13 | 18.49% +/- 0.13 |
+| AQ R2-D2 (Ours)              | 57.87% +/- 0.13 | 31.52% +/- 0.13 |
+
+A comparison of robustness method on 5-shot Mini-ImageNet. Natural accuracy is denoted A_nat, robust accuracy A_adv. A_adv is computed w.r.t. a 20-step PGD attack with epsilon bound 8/255. 
