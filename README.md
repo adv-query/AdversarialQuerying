@@ -16,3 +16,8 @@ This repository contains PyTorch code for adversarial querying with [ProtoNet](h
 | AQ R2-D2 (Ours)              | 57.87% +/- 0.13 | 31.52% +/- 0.13 |
 
 A comparison of robustness method on 5-shot Mini-ImageNet. Natural accuracy is denoted A_nat, robust accuracy A_adv. A_adv is computed w.r.t. a 20-step PGD attack with epsilon bound 8/255. 
+
+The result above can be reproduced by training a network with the following command: 
+```
+train.py --val_shot 5 --attack_embedding
+```
